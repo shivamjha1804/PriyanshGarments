@@ -46,17 +46,17 @@ const Statistics = () => {
   const yearsInMarket = useCounter(0, 10, 2000);
 
   return (
-    <div className="w-full px-6 sm:px-12 bg-white flex">
-      <div className="max-w-7xl mx-auto text-left space-y-4 w-1/2 self-center">
+    <div className="w-full px-6 sm:px-12 bg-white flex flex-col lg:flex-row justify-center items-center py-12">
+      <div className="max-w-7xl mx-auto text-left space-y-2 lg:w-1/2 lg:self-center lg:mr-10">
         {/* Title Section */}
-        <h1 className="text-xl sm:text-2xl font-bold text-gray-800">
+        <h1 className="text-lg sm:text-lg font-bold text-gray-800 text-center lg:text-left">
           OUR <span className="text-red-600">STATISTIC</span>
         </h1>
-        <h2 className="text-4xl sm:text-6xl font-bold text-gray-900">
+        <h2 className="text-4xl sm:text-5xl lg:text-5xl font-bold text-gray-900 text-center lg:text-left">
           MAKE YOUR <br /> STATEMENT{" "}
           <span className="text-red-600">IN STYLE</span>
         </h2>
-        <p className="text-lg text-gray-700 leading-relaxed mb-6">
+        <p className="text-sm text-gray-700 leading-relaxed text-center lg:text-left">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -69,35 +69,35 @@ const Statistics = () => {
         {/* Statistics Section */}
         <div
           id="stats"
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7"
         >
-          <div className="p-6 text-center">
-            <h1 className="text-4xl font-bold">
+          <div className="p-4 text-center">
+            <h1 className="text-2xl font-bold">
               {inView ? `${successfulProjects} +` : "0"}
             </h1>
-            <p className="text-lg text-red-600">Successful Projects</p>
+            <p className="text-sm text-red-600">Successful Projects</p>
           </div>
-          <div className="p-6 text-center">
-            <h1 className="text-4xl font-bold">
+          <div className="p-4 text-center">
+            <h1 className="text-2xl font-bold">
               {inView ? `${happyClients} +` : "0"}
             </h1>
-            <p className="text-lg text-red-600">Happy Clients</p>
+            <p className="text-sm text-red-600">Happy Clients</p>
           </div>
-          <div className="p-6 text-center">
-            <h1 className="text-4xl font-bold">
+          <div className="p-4 text-center">
+            <h1 className="text-2xl font-bold">
               {inView ? `${yearsInMarket} +` : "0"}
             </h1>
-            <p className="text-lg text-red-600">Years in Market</p>
+            <p className="text-sm text-red-600">Years in Market</p>
           </div>
         </div>
       </div>
 
       {/* Image Section */}
-      <div className="my-8 text-center">
+      <div className="my-8 lg:w-1/2 lg:self-center">
         <img
           src={StatisticsImage}
           alt="Statistics Image"
-          className="w-full max-w-2xl mx-auto object-cover"
+          className="w-full max-w-2xl mx-auto object-cover rounded-lg shadow-lg"
         />
       </div>
     </div>
