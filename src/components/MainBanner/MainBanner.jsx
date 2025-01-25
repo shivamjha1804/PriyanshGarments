@@ -11,15 +11,15 @@ const MainBanner = () => {
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>{" "}
       {/* Overlay to darken the background image */}
-      <div className="relative z-10 flex flex-col items-start justify-center h-full text-white px-6 sm:px-12 md:px-24">
+      <div className="relative z-10 flex flex-col items-start justify-center h-full text-white px-6 sm:px-12">
         {/* Heading */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 max-w-lg">
+        <h1 className="text-5xl w-96 sm:text-5xl font-bold mb-4">
           <span className="text-red-600">WE DESIGN</span> THE BEST APPARELS FOR
           YOU
         </h1>
 
         {/* Paragraph */}
-        <p className="text-sm sm:text-lg md:text-xl mb-6 max-w-xl">
+        <p className="text-base sm:text-lg mb-6 max-w-lg">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
