@@ -1,350 +1,109 @@
-import React, { useState } from "react";
-import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
+import React from "react";
 
-const Footer = () => {
-  const [email, setEmail] = useState("");
-
-  const handleSubscribe = () => {
-    console.log("Subscribing email:", email);
-    // Handle subscription logic here
-    setEmail("");
-  };
-
+const NewsletterFooter = () => {
   return (
-    <footer className="bg-black text-white">
+    <div className="bg-black text-white py-12 px-4 sm:px-6 lg:px-8">
       {/* Newsletter Section */}
-      <div className="px-6 py-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-            <div className="flex-1">
-              <h2 className="text-xl font-semibold mb-2">
-                Join Our Newsletter
-              </h2>
-              <p className="text-gray-300 text-sm">
-                Be the first to know about our latest updates, exclusive offers,
-                and more.
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-3 lg:ml-8">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email address"
-                className="bg-transparent border border-gray-600 rounded px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:border-gray-400 min-w-[300px]"
-              />
-              <button
-                onClick={handleSubscribe}
-                className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded font-medium transition-colors duration-200"
-              >
-                Subscribe
-              </button>
-            </div>
-          </div>
+      <div className="max-w-7xl mx-auto mb-8 px-4 flex flex-col md:flex-row items-center justify-between gap-8 ">
+        {/* Left side - Text content */}
+        <div className="text-left max-w-md">
+          <h2 className="text-xl font-bold  mb-4 tracking-tight">
+            Join Our Newsletter
+          </h2>
+          <p className=" text-sm leading-relaxed">
+            Be the first to know about our latest updates, exclusive offers, and
+            more.
+          </p>
+        </div>
+
+        {/* Right side - Input form */}
+        <div className="flex flex-col sm:flex-row  gap-3 w-full md:w-auto">
+          <input
+            type="email"
+            placeholder="Enter your email address"
+            className="px-3 py-3 border border-white rounded-lg flex-grow focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all bg-black"
+          />
+          <button className=" bg-red-600 text-white px-8 py-3 rounded-lg hover:bg-gray-900 transition-colors font-medium whitespace-nowrap">
+            Subscribe
+          </button>
         </div>
       </div>
-
-      {/* Divider */}
-      <div className="border-t border-gray-800"></div>
 
       {/* Footer Links */}
-      <div className="px-6 py-12">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-            {/* Product & Service */}
-            <div>
-              <h3 className="font-semibold text-lg mb-4">Product & Service</h3>
-              <ul className="space-y-3">
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    Clothing
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    Storage
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    Wearables
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    Accessories
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    Lifestyle
-                  </a>
-                </li>
-              </ul>
-            </div>
+      <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-8 text-sm pt-10 border-t border-gray-100">
+        {/* Column 1 */}
+        <div>
+          <h3 className="font-bold  mb-4">Product & Service</h3>
+          <ul className="space-y-2 ">
+            <li>Clothing</li>
+            <li>Storage</li>
+            <li>Wearables</li>
+            <li>Accessories</li>
+            <li>Lifestyle</li>
+          </ul>
+        </div>
 
-            {/* Account */}
-            <div>
-              <h3 className="font-semibold text-lg mb-4">Account</h3>
-              <ul className="space-y-3">
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    Orders
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    Service
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    Wishlist
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    Rewards
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    My Products
-                  </a>
-                </li>
-              </ul>
-            </div>
+        {/* Column 2 */}
+        <div>
+          <h3 className="font-bold  mb-4">Account</h3>
+          <ul className="space-y-2 ">
+            <li>Orders</li>
+            <li>Service</li>
+            <li>Wishlist</li>
+            <li>Rewards</li>
+            <li>My Products</li>
+          </ul>
+        </div>
 
-            {/* Shop Now */}
-            <div>
-              <h3 className="font-semibold text-lg mb-4">Shop Now</h3>
-              <ul className="space-y-3">
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    Offers
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    Promos
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    Online Shop FAQ
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    Business Offer
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    Student Offer
-                  </a>
-                </li>
-              </ul>
-            </div>
+        {/* Column 3 */}
+        <div>
+          <h3 className="font-bold  mb-4">Shop Now</h3>
+          <ul className="space-y-2 ">
+            <li>Offers</li>
+            <li>Promos</li>
+            <li>Online Shop FAQ</li>
+            <li>Business Offer</li>
+            <li>Student Offer</li>
+          </ul>
+        </div>
 
-            {/* Support */}
-            <div>
-              <h3 className="font-semibold text-lg mb-4">Support</h3>
-              <ul className="space-y-3">
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    Contact
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    Email Support
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    Live Chat
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    Phone Support
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    Community
-                  </a>
-                </li>
-              </ul>
-            </div>
+        {/* Column 4 */}
+        <div>
+          <h3 className="font-bold  mb-4">Support</h3>
+          <ul className="space-y-2 ">
+            <li>Contact</li>
+            <li>Email Support</li>
+            <li>Live Chat</li>
+            <li>Phone Support</li>
+            <li>Community</li>
+          </ul>
+        </div>
 
-            {/* About */}
-            <div>
-              <h3 className="font-semibold text-lg mb-4">About</h3>
-              <ul className="space-y-3">
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    Company Info
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    Brand Guidelines
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    Careers
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    Investors
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    About Us
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+        {/* Column 5 */}
+        <div>
+          <h3 className="font-bold  mb-4">About</h3>
+          <ul className="space-y-2 ">
+            <li>Company Info</li>
+            <li>Brand Guidelines</li>
+            <li>Careers</li>
+            <li>Investors</li>
+            <li>About Us</li>
+          </ul>
         </div>
       </div>
 
-      {/* Bottom Section */}
-      <div className="border-t border-gray-800">
-        <div className="px-6 py-6">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-gray-400 text-sm">
-              © 2025 PRIYANSHDGARMENTS. All Rights Reserved.
-            </div>
-
-            <div className="flex items-center gap-6">
-              <div className="flex gap-4 text-sm">
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Privacy
-                </a>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Legal
-                </a>
-              </div>
-
-              <div className="flex gap-4">
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  <Facebook size={20} />
-                </a>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  <Instagram size={20} />
-                </a>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  <Twitter size={20} />
-                </a>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  <Linkedin size={20} />
-                </a>
-              </div>
-            </div>
-          </div>
+      {/* Copyright Section */}
+      <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center text-sm ">
+        <div className="mb-4 md:mb-0">
+          © 2025 PRIVANSHOFANERTS. All Rights Reserved
+        </div>
+        <div className="flex space-x-4">
+          <span>Privacy</span>
+          <span>Legal</span>
         </div>
       </div>
-    </footer>
+    </div>
   );
 };
 
-export default Footer;
+export default NewsletterFooter;
