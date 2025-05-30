@@ -1,6 +1,6 @@
-import react from '@vitejs/plugin-react'; // Import the React plugin
+import react from "@vitejs/plugin-react";
 
 export default {
   plugins: [react()],
-  base: /PriyanshGarments/
+  base: "/PriyanshGarments/", // Must be a string starting and ending with a slash
 };
