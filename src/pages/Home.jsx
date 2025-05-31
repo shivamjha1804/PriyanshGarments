@@ -9,6 +9,8 @@ import LatestProject from "../components/LatestProject/LatestProject";
 import Product from "../components/Product/Product";
 import Footer from "./Footer";
 import ContactUs from "./ContactUs";
+import ViewProduct from "./ViewProduct";
+import ProductDetail from "./ProductDetails";
 
 const Home = () => {
   return (
@@ -23,6 +25,8 @@ const Home = () => {
       <Product />
       <ContactUs />
       <Footer />
+      <ViewProduct />
+      <ProductDetail />
     </>
   );
 };
