@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import StatisticsImage from "../../assets/Statistics/StatisticsImage.png";
 
-// Counter function to animate numbers
 const useCounter = (start, end, duration) => {
   const [count, setCount] = useState(start);
 
@@ -26,78 +25,83 @@ const useCounter = (start, end, duration) => {
 const Statistics = () => {
   const [inView, setInView] = useState(false);
 
-  const handleScroll = () => {
-    const statsElement = document.getElementById("stats");
-    const rect = statsElement.getBoundingClientRect();
-    if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-      setInView(true);
-    }
-  };
-
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
+    const handleScroll = () => {
+      const statsElement = document.getElementById("stats");
+      if (statsElement) {
+        const rect = statsElement.getBoundingClientRect();
+        setInView(rect.top <= window.innerHeight * 0.75 && rect.bottom >= 0);
+      }
     };
+
+    // Initial check
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const successfulProjects = useCounter(0, 100000, 2000); // 2 seconds animation
+  const successfulProjects = useCounter(0, 100000, 2000);
   const happyClients = useCounter(0, 200, 2000);
   const yearsInMarket = useCounter(0, 10, 2000);
 
   return (
-    <div className="w-full px-6 sm:px-12 bg-white flex flex-col lg:flex-row justify-center items-center py-12">
-      <div className="max-w-7xl mx-auto text-left space-y-2 lg:w-1/2 lg:self-center lg:mr-10">
+    <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 bg-white flex flex-col lg:flex-row justify-center items-center py-8 md:py-12 lg:py-16 gap-8 lg:gap-12">
+      {/* Text Content */}
+      <div className="w-full lg:w-1/2 max-w-3xl mx-auto space-y-4 md:space-y-6">
         {/* Title Section */}
-        <h1 className="text-lg sm:text-lg font-bold text-gray-800 text-center lg:text-left">
-          OUR <span className="text-red-600">STATISTIC</span>
-        </h1>
-        <h2 className="text-4xl sm:text-5xl lg:text-5xl font-bold text-gray-900 text-center lg:text-left">
-          MAKE YOUR <br /> STATEMENT{" "}
-          <span className="text-red-600">IN STYLE</span>
-        </h2>
-        <p className="text-sm text-gray-700 leading-relaxed text-center lg:text-left">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <div className="text-center lg:text-left space-y-3 md:space-y-4">
+          <h1 className="text-base md:text-lg font-bold text-gray-800">
+            OUR <span className="text-red-600">STATISTICS</span>
+          </h1>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+            MAKE YOUR <br className="hidden xs:block" />
+            STATEMENT <span className="text-red-600">IN STYLE</span>
+          </h2>
+          <p className="text-sm sm:text-[0.92rem] md:text-base text-gray-700 leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
 
         {/* Statistics Section */}
         <div
           id="stats"
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7"
+          className="grid lg:grid-cols-3 md:grid-cols-3  gap-4 sm:gap-6 md:gap-8 mt-6 md:mt-8"
         >
-          <div className="p-4 text-center">
-            <h1 className="text-2xl font-bold">
-              {inView ? `${successfulProjects} +` : "0"}
-            </h1>
-            <p className="text-sm text-red-600">Successful Projects</p>
-          </div>
-          <div className="p-4 text-center">
-            <h1 className="text-2xl font-bold">
-              {inView ? `${happyClients} +` : "0"}
-            </h1>
-            <p className="text-sm text-red-600">Happy Clients</p>
-          </div>
-          <div className="p-4 text-center">
-            <h1 className="text-2xl font-bold">
-              {inView ? `${yearsInMarket} +` : "0"}
-            </h1>
-            <p className="text-sm text-red-600">Years in Market</p>
-          </div>
+          {[
+            { value: successfulProjects, label: "Successful Projects" },
+            { value: happyClients, label: "Happy Clients" },
+            { value: yearsInMarket, label: "Years in Market" },
+          ].map((stat, index) => (
+            <div
+              key={index}
+              className="p-3 sm:p-4 text-center bg-gray-50 rounded-lg"
+            >
+              <h1 className="text-xl sm:text-2xl md:text-3xl font-bold">
+                {inView ? `${stat.value.toLocaleString()}+` : "0"}
+              </h1>
+              <p className="text-xs sm:text-sm text-red-600 font-medium mt-1">
+                {stat.label}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
 
       {/* Image Section */}
-      <div className="my-8 lg:w-1/2 lg:self-center">
+      <div className="w-full lg:w-1/2 flex justify-center">
         <img
           src={StatisticsImage}
           alt="Statistics Image"
-          className="w-full max-w-2xl mx-auto object-cover rounded-lg shadow-lg"
+          className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl object-cover rounded-lg shadow-lg"
+          style={{
+            height: "auto",
+            maxHeight: "400px",
+            objectPosition: "center",
+          }}
         />
       </div>
     </div>
