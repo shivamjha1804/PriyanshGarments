@@ -1,140 +1,115 @@
 import React from "react";
+import { Star, Users, Award, Target } from "lucide-react";
 
-const AboutPage = () => {
+const AboutUsSection = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
-            About PriyanshGarments
-          </h1>
-          <p className="mt-5 max-w-xl mx-auto text-xl text-gray-500">
-            Crafting quality garments with passion and precision since 2010.
+    <section id="about" className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">ABOUT US</h2>
+          <div className="w-24 h-1 bg-red-600 mx-auto mb-6"></div>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Crafting exceptional experiences and delivering quality solutions
+            that exceed expectations
           </p>
         </div>
 
-        <div className="bg-white shadow-xl rounded-lg overflow-hidden">
-          <div className="md:flex">
-            <div className="md:flex-shrink-0">
-              <img
-                className="h-full w-full object-cover md:w-96"
-                src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                alt="Garment factory"
-              />
-            </div>
-            <div className="p-8">
-              <div className="uppercase tracking-wide text-sm text-indigo-600 font-semibold">
-                Our Story
-              </div>
-              <p className="mt-2 text-gray-600">
-                Founded in 2010, PriyanshGarments started as a small tailoring
-                shop with just two sewing machines. Today, we've grown into a
-                full-scale garment manufacturing unit employing over 200 skilled
-                workers and producing high-quality apparel for both domestic and
-                international markets.
-              </p>
-
-              <div className="mt-6">
-                <div className="uppercase tracking-wide text-sm text-indigo-600 font-semibold">
-                  Our Mission
-                </div>
-                <p className="mt-2 text-gray-600">
-                  To deliver exceptional quality garments at competitive prices
-                  while maintaining ethical production practices and sustainable
-                  business operations.
-                </p>
-              </div>
-
-              <div className="mt-6">
-                <div className="uppercase tracking-wide text-sm text-indigo-600 font-semibold">
-                  Our Values
-                </div>
-                <ul className="mt-2 list-disc list-inside text-gray-600 space-y-1">
-                  <li>Quality craftsmanship in every stitch</li>
-                  <li>Fair wages and safe working conditions</li>
-                  <li>Innovation in design and production</li>
-                  <li>Customer satisfaction above all</li>
-                  <li>Environmental responsibility</li>
-                </ul>
+        {/* Main Content */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          <div>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+              Our Story
+            </h3>
+            <p className="text-gray-600 mb-6 leading-relaxed">
+              Founded with a vision to transform the industry, we have been
+              dedicated to providing exceptional service and innovative
+              solutions. Our journey began with a simple belief: that quality
+              and customer satisfaction should never be compromised.
+            </p>
+            <p className="text-gray-600 mb-6 leading-relaxed">
+              Over the years, we have built a reputation for excellence, working
+              with clients from various industries and helping them achieve
+              their goals through our expertise and commitment to quality.
+            </p>
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center">
+                <Star className="w-5 h-5 text-yellow-500 fill-current" />
+                <Star className="w-5 h-5 text-yellow-500 fill-current" />
+                <Star className="w-5 h-5 text-yellow-500 fill-current" />
+                <Star className="w-5 h-5 text-yellow-500 fill-current" />
+                <Star className="w-5 h-5 text-yellow-500 fill-current" />
+                <span className="ml-2 text-sm text-gray-600">5.0 Rating</span>
               </div>
             </div>
+          </div>
+          <div className="bg-gray-100 rounded-lg p-8">
+            <img
+              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              alt="Our team"
+              className="w-full h-64 object-cover rounded-lg"
+            />
           </div>
         </div>
 
-        <div className="mt-12 grid gap-8 md:grid-cols-3">
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <div className="text-indigo-600 mb-4">
-              <svg
-                className="w-10 h-10"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
-                  clipRule="evenodd"
-                />
-              </svg>
+        {/* Stats */}
+        <div className="grid md:grid-cols-4 gap-8 mb-16">
+          <div className="text-center">
+            <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Users className="w-8 h-8 text-red-600" />
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">
-              Production Capacity
+            <h4 className="text-3xl font-bold text-gray-900 mb-2">500+</h4>
+            <p className="text-gray-600">Happy Clients</p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Award className="w-8 h-8 text-red-600" />
+            </div>
+            <h4 className="text-3xl font-bold text-gray-900 mb-2">50+</h4>
+            <p className="text-gray-600">Projects Completed</p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Star className="w-8 h-8 text-red-600" />
+            </div>
+            <h4 className="text-3xl font-bold text-gray-900 mb-2">5.0</h4>
+            <p className="text-gray-600">Average Rating</p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Target className="w-8 h-8 text-red-600" />
+            </div>
+            <h4 className="text-3xl font-bold text-gray-900 mb-2">10+</h4>
+            <p className="text-gray-600">Years Experience</p>
+          </div>
+        </div>
+
+        {/* Mission & Vision */}
+        <div className="grid md:grid-cols-2 gap-12">
+          <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm">
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+              Our Mission
             </h3>
-            <p className="text-gray-600">
-              50,000+ garments per month with state-of-the-art machinery and
-              skilled workforce.
+            <p className="text-gray-600 leading-relaxed">
+              To deliver innovative solutions that empower our clients to
+              achieve their goals while maintaining the highest standards of
+              quality, integrity, and customer service.
             </p>
           </div>
-
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <div className="text-indigo-600 mb-4">
-              <svg
-                className="w-10 h-10"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
-                  clipRule="evenodd"
-                />
-                <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">
-              Certifications
+          <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm">
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+              Our Vision
             </h3>
-            <p className="text-gray-600">
-              ISO 9001:2015 certified, OEKO-TEX Standard 100 compliant, and
-              Sedex member.
-            </p>
-          </div>
-
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <div className="text-indigo-600 mb-4">
-              <svg
-                className="w-10 h-10"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">
-              Quick Turnaround
-            </h3>
-            <p className="text-gray-600">
-              From design to delivery in as little as 4 weeks, depending on
-              order complexity.
+            <p className="text-gray-600 leading-relaxed">
+              To become the leading provider in our industry, recognized for our
+              commitment to excellence, innovation, and creating lasting value
+              for our clients and community.
             </p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default AboutPage;
+export default AboutUsSection;
