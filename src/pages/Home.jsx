@@ -24,6 +24,8 @@ const Home = () => {
       <LatestProject />
       <Product />
       <ContactUs />
+      <About />
+      <MainContact />
       <Footer />
       <ViewProduct />
       <ProductDetail />
