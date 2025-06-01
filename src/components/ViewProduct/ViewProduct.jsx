@@ -1,16 +1,17 @@
-import React, { useState, useMemo } from "react";
+import  { useState, useMemo } from "react";
+import PropTypes from "prop-types";
 import {
   ChevronDown,
   ChevronUp,
-  Grid,
-  List,
-  MoreHorizontal,
+ Grid,
   Star,
   Filter,
   X,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function ProductListing() {
+  const navigate = useNavigate();
   // Complete product dataset
   const allProducts = [
     {
@@ -216,28 +217,10 @@ export default function ProductListing() {
     setExpandedSections((prev) => ({
       ...prev,
       [section]: !prev[section],
-    }));
-  };
+  }));
 
-  const handleCheckboxChange = (category, value) => {
-    setFilters((prev) => ({
-      ...prev,
-      [category]: prev[category].includes(value)
-        ? prev[category].filter((item) => item !== value)
-        : [...prev[category], value],
-    }));
-  };
-
-  const clearAllFilters = () => {
-    setFilters({
-      category: [],
-      ratings: "1.0 & up",
-      brand: [],
-      priceRange: [0, maxPrice],
-      sizeRange: [5, 15],
-    });
-  };
-
+    };
+  
   const StarRating = ({ rating, showCount = false, count = 0 }) => {
     return (
       <div className="flex items-center gap-1">
@@ -260,6 +243,35 @@ export default function ProductListing() {
     );
   };
 
+  const handleOpenProduct = (id) => {
+        navigate(`/product/${id}`);
+  }
+  
+  StarRating.propTypes = {
+    rating: PropTypes.number.isRequired,
+    showCount: PropTypes.bool,
+    count: PropTypes.number,
+  };
+
+  const handleCheckboxChange = (category, value) => {
+    setFilters((prev) => ({
+      ...prev,
+      [category]: prev[category].includes(value)
+        ? prev[category].filter((item) => item !== value)
+        : [...prev[category], value],
+    }));
+  };
+
+  const clearAllFilters = () => {
+    setFilters({
+      category: [],
+      ratings: "1.0 & up",
+      brand: [],
+      priceRange: [0, maxPrice],
+      sizeRange: [5, 15],
+    });
+  };
+
   const FilterSection = ({ title, children, isExpanded, onToggle }) => (
     <div className="border-b border-gray-200 pb-4 mb-4">
       <button
@@ -277,6 +289,13 @@ export default function ProductListing() {
     </div>
   );
 
+  FilterSection.propTypes = {
+    title: PropTypes.string.isRequired,
+    children: PropTypes.node.isRequired,
+    isExpanded: PropTypes.bool.isRequired,
+    onToggle: PropTypes.func.isRequired,
+  };
+
   const CheckboxItem = ({ label, count, checked, onChange }) => (
     <label className="flex items-center justify-between text-sm text-gray-700 mb-2 cursor-pointer">
       <div className="flex items-center">
@@ -291,6 +310,13 @@ export default function ProductListing() {
       <span className="text-gray-500">({count})</span>
     </label>
   );
+
+  CheckboxItem.propTypes = {
+    label: PropTypes.string.isRequired,
+    count: PropTypes.number.isRequired,
+    checked: PropTypes.bool.isRequired,
+    onChange: PropTypes.func.isRequired,
+  };
 
   const RatingFilter = ({ rating, count, selected, onChange }) => (
     <label className="flex items-center justify-between text-sm text-gray-700 mb-2 cursor-pointer">
@@ -308,6 +334,13 @@ export default function ProductListing() {
       <span className="text-gray-500">({count})</span>
     </label>
   );
+
+  RatingFilter.propTypes = {
+    rating: PropTypes.number.isRequired,
+    count: PropTypes.number.isRequired,
+    selected: PropTypes.bool.isRequired,
+    onChange: PropTypes.func.isRequired,
+  };
 
   // Calculate counts for filters
   const getCategoryCount = (category) => {
@@ -815,44 +848,6 @@ export default function ProductListing() {
           </div>
         </div>
 
-        {/* Header - Desktop */}
-        <div className="hidden md:flex items-center justify-between mb-6">
-          <div className="flex items-center gap-4">
-            <span className="text-sm text-gray-600">View as</span>
-            <div className="flex border border-gray-300 rounded">
-              <button
-                onClick={() => setViewMode("grid")}
-                className={`p-2 ${viewMode === "grid" ? "bg-gray-100" : ""}`}
-              >
-                <Grid className="w-4 h-4" />
-              </button>
-              <button
-                onClick={() => setViewMode("list")}
-                className={`p-2 ${viewMode === "list" ? "bg-gray-100" : ""}`}
-              >
-                <List className="w-4 h-4" />
-              </button>
-              <button className="p-2">
-                <MoreHorizontal className="w-4 h-4" />
-              </button>
-            </div>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="text-sm text-gray-600">Sort By</span>
-            <select
-              className="border border-gray-300 rounded px-3 py-1 text-sm"
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value)}
-            >
-              <option value="featured">Featured</option>
-              <option value="price-low">Price: Low to High</option>
-              <option value="price-high">Price: High to Low</option>
-              <option value="rating">Highest Rated</option>
-              <option value="newest">Newest</option>
-            </select>
-          </div>
-        </div>
-
         {/* Results count */}
         <div className="mb-4">
           <span className="text-sm text-gray-600">
@@ -871,7 +866,8 @@ export default function ProductListing() {
           {filteredProducts.map((product) => (
             <div
               key={product.id}
-              className={`bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 ${
+              onClick={() => handleOpenProduct(product.id)}
+             className={`bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 ${
                 viewMode === "list" ? "flex flex-col md:flex-row" : ""
               }`}
             >

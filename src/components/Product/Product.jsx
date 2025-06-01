@@ -1,4 +1,4 @@
-import React from "react";
+import { useNavigate } from "react-router-dom";
 import image from "../../assets/Product/image.png";
 
 const products = Array(8).fill({
@@ -8,6 +8,13 @@ const products = Array(8).fill({
 });
 
 const Product = () => {
+  const navigate = useNavigate();
+
+  const handleViewMore = () => {
+    navigate("/products"); // Use relative path since basename is set
+  };
+
+
   return (
     <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 md:py-12 lg:py-16 bg-gray-100">
       {/* Heading */}
@@ -16,7 +23,6 @@ const Product = () => {
           OUR <span className="text-red-600">PRODUCTS</span>
         </h2>
       </div>
-
       {/* Product Grid */}
       <div className="max-w-7xl mx-auto grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
         {products.map((product, index) => (
@@ -43,10 +49,12 @@ const Product = () => {
           </div>
         ))}
       </div>
-
       {/* View More Button */}
       <div className="flex justify-center mt-8 sm:mt-10 md:mt-12">
-        <button className="bg-red-600 hover:bg-red-700 text-white px-5 sm:px-6 py-2 sm:py-3 rounded-lg text-sm sm:text-base md:text-lg font-semibold shadow-md transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">
+        <button 
+          onClick={handleViewMore}
+          className="bg-red-600 hover:bg-red-700 text-white px-5 sm:px-6 py-2 sm:py-3 rounded-lg text-sm sm:text-base md:text-lg font-semibold shadow-md transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
+        >
           VIEW MORE
         </button>
       </div>
