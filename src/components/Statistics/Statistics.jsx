@@ -41,9 +41,9 @@ const Statistics = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const successfulProjects = useCounter(0, 100000, 2000);
-  const happyClients = useCounter(0, 200, 2000);
-  const yearsInMarket = useCounter(0, 10, 2000);
+  const successfulProjects = useCounter(0, 500, 2000);
+  const happyClients = useCounter(0, 300, 2000);
+  const yearsInMarket = useCounter(0, 5, 2000);
 
   return (
     <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 bg-white flex flex-col lg:flex-row justify-center items-center py-8 md:py-12 lg:py-16 gap-8 lg:gap-12">
@@ -59,17 +59,22 @@ const Statistics = () => {
             STATEMENT <span className="text-red-600">IN STYLE</span>
           </h2>
           <p className="text-sm sm:text-[0.92rem] md:text-base text-gray-700 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Priyansh Garments has manufactured over 500 garments and served more
+            than 300 satisfied clients worldwide. Our facility in Mumbai
+            consistently delivers results for fashion startups, established
+            retail brands, and corporate partners. Backed by 5 years of industry
+            experience, we combine innovation and efficiency in every project.
+            Each garment is a reflection of our commitment to precision,
+            quality, and timely delivery. Our results are not just numbers —
+            they are proof of our dedication to customer satisfaction and
+            production excellence.
           </p>
         </div>
 
         {/* Statistics Section */}
         <div
           id="stats"
-          className="grid lg:grid-cols-3 md:grid-cols-3  gap-4 sm:gap-6 md:gap-8 mt-6 md:mt-8"
+          className="grid lg:grid-cols-3 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mt-6 md:mt-8"
         >
           {[
             { value: successfulProjects, label: "Successful Projects" },
@@ -81,7 +86,11 @@ const Statistics = () => {
               className="p-3 sm:p-4 text-center bg-gray-50 rounded-lg"
             >
               <h1 className="text-xl sm:text-2xl md:text-3xl font-bold">
-                {inView ? `${stat.value.toLocaleString()}+` : "0"}
+                {inView
+                  ? `${stat.value.toLocaleString()}${
+                      stat.label === "Years in Market" ? "" : "+"
+                    }`
+                  : "0"}
               </h1>
               <p className="text-xs sm:text-sm text-red-600 font-medium mt-1">
                 {stat.label}

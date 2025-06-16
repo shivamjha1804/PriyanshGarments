@@ -5,19 +5,22 @@ const Services = () => {
   const services = [
     {
       title: "Fast Response",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description: "Quickly replying to messages, emails, or service requests.",
     },
     {
       title: "Quality Work",
-      description: "Sed do eiusmod tempor incididunt ut labore et dolore.",
+      description:
+        "Providing results that are well-made, professional, and meet high standards.",
     },
     {
       title: "Expert Team",
-      description: "Ut enim ad minim veniam, quis nostrud exercitation.",
+      description:
+        "A group of skilled and knowledgeable professionals in the field.",
     },
     {
       title: "24/7 Support",
-      description: "Duis aute irure dolor in reprehenderit in voluptate.",
+      description:
+        "Help and assistance are available at any time—day or night.",
     },
   ];
 
@@ -57,16 +60,15 @@ const Services = () => {
           </h2>
           <div className="space-y-3 sm:space-y-4">
             <p className="text-sm sm:text-[0.92rem] md:text-base text-gray-700 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <p className="text-sm sm:text-[0.92rem] md:text-base text-gray-700 leading-relaxed">
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum. Duis aute irure dolor
-              in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
+              At Priyansh Garments, we provide complete clothing manufacturing
+              services tailored to your specific requirements. We handle
+              everything from initial design discussions to final packaging and
+              delivery. Our production covers men’s wear, women’s wear,
+              kidswear, uniforms, medical scrubs, and fancy designer garments —
+              all crafted to match your brand’s standards. Every stage of
+              production is carried out using advanced machines and monitored
+              closely for quality. We focus on meeting deadlines, ensuring fit
+              accuracy, and delivering garments that your customers will love.
             </p>
           </div>
         </div>

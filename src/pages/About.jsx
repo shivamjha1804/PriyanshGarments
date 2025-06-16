@@ -58,14 +58,14 @@ const AboutUsSection = () => {
             <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Users className="w-8 h-8 text-red-600" />
             </div>
-            <h4 className="text-3xl font-bold text-gray-900 mb-2">500+</h4>
+            <h4 className="text-3xl font-bold text-gray-900 mb-2">300+</h4>
             <p className="text-gray-600">Happy Clients</p>
           </div>
           <div className="text-center">
             <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Award className="w-8 h-8 text-red-600" />
             </div>
-            <h4 className="text-3xl font-bold text-gray-900 mb-2">50+</h4>
+            <h4 className="text-3xl font-bold text-gray-900 mb-2">500+</h4>
             <p className="text-gray-600">Projects Completed</p>
           </div>
           <div className="text-center">
@@ -79,7 +79,7 @@ const AboutUsSection = () => {
             <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Target className="w-8 h-8 text-red-600" />
             </div>
-            <h4 className="text-3xl font-bold text-gray-900 mb-2">10+</h4>
+            <h4 className="text-3xl font-bold text-gray-900 mb-2">8+</h4>
             <p className="text-gray-600">Years Experience</p>
           </div>
         </div>

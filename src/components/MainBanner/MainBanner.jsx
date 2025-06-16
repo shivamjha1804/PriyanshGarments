@@ -1,12 +1,15 @@
 import React from "react";
-import BannerImage from "../../assets/MainBanner/mainBannerImage.png";
+import BannerImage from "../../assets/MainBanner/mainBannerImage1.jpg";
 
 const MainBanner = () => {
   return (
     <div
-      className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-screen bg-cover bg-center"
+      className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-screen"
       style={{
         backgroundImage: `url(${BannerImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -21,10 +24,9 @@ const MainBanner = () => {
 
         {/* Paragraph */}
         <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip.
+          Priyansh Garments offers premium clothing manufacturing in Mumbai,
+          crafting all styles with precision. We ensure global quality,
+          efficient production, and timely delivery for every brand.
         </p>
 
         {/* Button */}

@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import image1 from "../../assets/LatestProject/image.png";
-import image2 from "../../assets/LatestProject/image2.png";
-import image3 from "../../assets/LatestProject/image3.png";
+import image1 from "../../assets/LatestProject/image.jpg";
+import image2 from "../../assets/LatestProject/image2.jpg";
+import image3 from "../../assets/LatestProject/image3.jpg";
 import image4 from "../../assets/LatestProject/image4.png";
 
 const data = [
-  { image: image1, title: "CORPORATE CLOTH" },
+  { image: image1, title: "SCHOOL CLOTH" },
   { image: image2, title: "OFFICE CLOTH" },
   { image: image3, title: "HOME CLOTH" },
-  { image: image4, title: "CASUAL CLOTH" },
+  { image: image4, title: "HOSPITAL CLOTH" },
 ];
 
 const LatestProject = () => {
@@ -23,21 +23,15 @@ const LatestProject = () => {
         OUR <span className="text-red-600">LATEST</span> PROJECT
       </h2>
       <p className="text-sm text-gray-700 leading-relaxed mb-4">
-        Cras sagittis justo enim, eu sagittis purus molestie vitae. Vestibulum
-        porttitor in massa feugiat blandit. Nunc ac viverra magna. Etiam dictum
-        pellentesque libero a porttitor. Vestibulum dapibus, metus a molestie
-        tincidunt, tortor nisl mollis mi, vitae commodo lorem mi auctor tellus.
-        Interdum et malesuada fames ac ante ipsum primis in faucibus.Aenean erat
-        ipsum, euismod auctor augue ac, hendrerit lacinia lorem. Ut nec leo id
-        justo luctus accumsan sed id dolor. Sed ac rhoncus diam, sit amet tempor
-        ligulaCras sagittis justo enim, eu sagittis purus molestie vitae.
-        Vestibulum porttitor in massa feugiat blandit. Nunc ac viverra magna.
-        Etiam dictum pellentesque libero a porttitor. Vestibulum dapibus, metus
-        a molestie tincidunt, tortor nisl mollis mi, vitae commodo lorem mi
-        auctor tellus. Interdum et malesuada fames ac ante ipsum primis in
-        faucibus.Aenean erat ipsum, euismod auctor augue ac, hendrerit lacinia
-        lorem. Ut nec leo id justo luctus accumsan sed id dolor. Sed ac rhoncus
-        diam, sit amet tempor ligula
+        In our latest project, we successfully completed a high-volume
+        manufacturing order that included men’s formalwear, women’s ethnic
+        garments, and playful children’s outfits. The collection was designed to
+        reflect the client’s brand identity and executed with exceptional
+        attention to detail. We used our advanced machinery to ensure flawless
+        stitching, accurate sizing, and on-time delivery. From sourcing the
+        fabrics to the final quality check, every process was managed
+        seamlessly. This project showcases our ability to combine large-scale
+        production with creativity and premium-quality output.
       </p>
 
       {/* Image Gallery */}

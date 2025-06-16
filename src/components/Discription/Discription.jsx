@@ -1,8 +1,8 @@
 import React from "react";
-import DiscriptionOneImage from "../../assets/Discription/DiscriptionOne.png";
-import DiscriptionTwoImage from "../../assets/Discription/DiscriptionTwo.png";
-import DiscriptionThreeImage from "../../assets/Discription/DiscriptionThree.png";
-import DiscriptionFourImage from "../../assets/Discription/DiscriptionFour.png";
+import Checking from "../../assets/Discription/Checking.jpg";
+import Kansai from "../../assets/Discription/Kansai.jpg";
+import Packing from "../../assets/Discription/Packing.JPG";
+import Press from "../../assets/Discription/Press.jpg";
 
 const Discription = () => {
   return (
@@ -15,18 +15,24 @@ const Discription = () => {
           <span className="text-red-600">CLOTHING</span> <br /> MANUFACTURING
         </h1>
         <p className="text-sm md:text-base text-gray-600 leading-relaxed max-w-2xl">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-          tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+          Welcome to Priyansh Garments, your trusted apparel manufacturing
+          partner. Based in Mumbai, we serve fashion and corporate brands across
+          India and overseas. Our modern facility and skilled team handle bulk
+          orders with ease, offering men’s, women’s, kidswear, uniforms, and
+          custom styles—ensuring quality, consistency, and innovation in every
+          garment produced.
         </p>
         <div className="my-6 md:my-8 max-w-2xl">
           <h1 className="text-xl md:text-2xl font-bold text-left text-black mb-2">
             INNOVATIVE
           </h1>
           <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-            luctus nec ullamcorper mattis, pulvinar dapibus leo.
+            At Priyansh Garments, innovation drives everything we do. We use
+            advanced tools and smart, sustainable practices to improve quality
+            and speed. Our evolving processes support both the environment and
+            fashion trends. Whether scaling production or launching new lines,
+            we ensure efficiency, customization, and reliability to keep your
+            brand ahead.
           </p>
         </div>
         <div className="my-6 md:my-8 max-w-2xl">
@@ -34,38 +40,39 @@ const Discription = () => {
             CREATIVE
           </h1>
           <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-            luctus nec ullamcorper mattis, pulvinar dapibus leo.
+            At Priyansh Garments, creativity shapes every step. Our design team
+            works closely with clients to turn ideas into stylish,
+            production-ready garments. From fabric selection to final sampling,
+            we ensure comfort, style, and brand identity. With trend insight and
+            design expertise, we bring fashion visions to life with originality.
           </p>
         </div>
       </div>
       <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:w-1/2 w-full">
         <div className="lg:translate-y-10">
           <img
-            src={DiscriptionOneImage}
+            src={Checking}
             alt="Description One"
             className="w-full h-48 sm:h-64 md:h-80 object-cover border border-red-600"
           />
         </div>
         <div className="lg:-translate-y-10">
           <img
-            src={DiscriptionTwoImage}
+            src={Kansai}
             alt="Description Two"
             className="w-full h-48 sm:h-64 md:h-80 object-cover border border-red-600"
           />
         </div>
         <div className="lg:translate-y-10">
           <img
-            src={DiscriptionThreeImage}
+            src={Packing}
             alt="Description Three"
             className="w-full h-48 sm:h-64 md:h-80 object-cover border border-red-600"
           />
         </div>
         <div className="lg:-translate-y-10">
           <img
-            src={DiscriptionFourImage}
+            src={Press}
             alt="Description Four"
             className="w-full h-48 sm:h-64 md:h-80 object-cover border border-red-600"
           />

@@ -1,5 +1,5 @@
 import React from "react";
-import InovationImage from "../../assets/Inovation/InovationImage.png";
+import InovationImage from "../../assets/Inovation/InovationImage.JPG";
 
 const InnovationIdea = () => {
   return (
@@ -26,18 +26,15 @@ const InnovationIdea = () => {
           </h2>
           <div className="space-y-3 sm:space-y-4">
             <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
-            </p>
-            <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-              Dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est
-              laborum.
+              We combine innovation with elegance to create stylish clothing
+              that aligns with modern fashion standards. Our Mumbai-based team
+              specializes in manufacturing apparel for men, women, and children
+              with exceptional detail and finishing. From the drawing board to
+              the final stitch, we deliver garments that are fashionable,
+              functional, and brand-aligned. Every product is developed using
+              state-of-the-art technology and creative design techniques to
+              ensure comfort, consistency, and a polished look that enhances
+              your brand identity.
             </p>
           </div>
           <button className="mt-4 sm:mt-6 border-2 border-red-600 text-red-600 px-4 py-2 text-sm sm:text-base hover:bg-red-700 hover:text-white transition duration-300 ease-in-out">

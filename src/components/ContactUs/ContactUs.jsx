@@ -46,27 +46,28 @@ const ContactSection = () => {
           <div className="flex justify-center items-center gap-8 mb-8">
             <div className="flex items-center gap-2">
               <Phone className="text-red-500 w-5 h-5" />
-              <span className="text-gray-700">+91 1234567890</span>
+              <span className="text-gray-700">9870459197 / 8080604135</span>
             </div>
             <div className="flex items-center gap-2">
               <Mail className="text-red-500 w-5 h-5" />
-              <span className="text-gray-700">random@mail.com</span>
+              <span className="text-gray-700">info@priyanshgarments.com</span>
             </div>
           </div>
 
           <p className="text-gray-600 max-w-md mx-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+            Priyansh Garments provides expert garment manufacturing for startups
+            and brands—quality clothing, timely delivery, and nationwide
+            support. Contact us today!
           </p>
         </div>
 
         {/* Main Content */}
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className=" px-40 gap-12 items-start">
           {/* Map Section */}
           <div className="relative">
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+            {/* <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.83923192776!2d77.06889754725782!3d28.527252774805454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi%2C%20India!5e0!3m2!1sen!2sus!4v1685123456789!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.570190711383!2d73.0631!3d19.2967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7949bd28a5b29%3A0x8d30bfa4ef6c43f!2sAdhmeeta%20Texpa%20II!5e0!3m2!1sen!2sin!4v1718534000000!5m2!1sen!2sin"
                 width="100%"
                 height="400"
                 style={{ border: 0 }}
@@ -75,7 +76,7 @@ const ContactSection = () => {
                 referrerPolicy="no-referrer-when-downgrade"
                 className="w-full h-96"
               ></iframe>
-            </div>
+            </div> */}
           </div>
 
           {/* Contact Form */}
