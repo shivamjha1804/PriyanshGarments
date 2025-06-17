@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import StatisticsImage from "../../assets/Statistics/StatisticsImage.png";
+import StatisticsImage from "../../assets/Statistics/StatisticsImage.jpg";
 
 const useCounter = (start, end, duration) => {
   const [count, setCount] = useState(start);
@@ -74,7 +74,7 @@ const Statistics = () => {
         {/* Statistics Section */}
         <div
           id="stats"
-          className="grid lg:grid-cols-3 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mt-6 md:mt-8"
+          className="grid  lg:grid-cols-3 grid-cols-3 gap-4 sm:gap-6 md:gap-8 mt-6 md:mt-8"
         >
           {[
             { value: successfulProjects, label: "Successful Projects" },
