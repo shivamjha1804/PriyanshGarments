@@ -1,13 +1,15 @@
-import React from "react";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
-
+import NavBar from "../components/Nav/NavBar";
+import Footer from "../components/Footer/Footer";
 const ContactUsSection = () => {
   return (
-    <section
-      id="contact"
-      className="py-20 bg-gradient-to-b from-gray-50 to-white"
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <>
+      <NavBar />
+      <section
+        id="contact"
+        className="py-20 bg-gradient-to-b from-gray-50 to-white"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
           <span className="inline-block px-3 py-1 text-sm font-semibold text-red-600 bg-red-100 rounded-full mb-4">
@@ -152,7 +154,9 @@ const ContactUsSection = () => {
         </div>
       </div>
     </section>
-  );
-};
+    <Footer />
+  </>
+);
+}
 
 export default ContactUsSection;

@@ -1,8 +1,12 @@
 import React from "react";
 import { Star, Users, Award, Target } from "lucide-react";
+import NavBar from "../components/Nav/NavBar";
+import Footer from "../components/Footer/Footer";
 
 const AboutUsSection = () => {
   return (
+     <>
+      <NavBar />
     <section id="about" className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -109,6 +113,8 @@ const AboutUsSection = () => {
         </div>
       </div>
     </section>
+     <Footer />
+  </>
   );
 };
 

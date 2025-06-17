@@ -94,7 +94,7 @@ const NewsletterFooter = () => {
       {/* Copyright Section */}
       <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center text-sm ">
         <div className="mb-4 md:mb-0">
-          © 2025 PRIVANSHOFANERTS. All Rights Reserved
+          © 2025 PRIYANSH GARMENTS. All Rights Reserved
         </div>
         <div className="flex space-x-4">
           <span>Privacy</span>

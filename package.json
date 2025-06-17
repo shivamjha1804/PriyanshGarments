@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://shivamjha1804.github.io/PriyanshGarments",
+  // "homepage": "https://shivamjha1804.github.io/PriyanshGarments",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

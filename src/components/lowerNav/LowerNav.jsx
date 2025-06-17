@@ -1,11 +1,12 @@
-import React, { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import { Menu, X, Home, User, Phone } from "lucide-react";
+import Brandlogo from "../../assets/shortLogo.png";
+import { Link } from "react-router-dom";
 
 // Mobile Menu Component
 const MobileMenu = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
-
+  
   return (
     <>
       {/* Overlay */}
@@ -33,34 +34,34 @@ const MobileMenu = ({ isOpen, onClose }) => {
           <nav>
             <ul className="space-y-6">
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/"
                   className="flex items-center space-x-4 text-white hover:text-red-500 transition duration-300 group"
                   onClick={onClose}
                 >
                   <Home size={20} className="group-hover:text-red-500" />
                   <span className="text-lg">Home</span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/about"
                   className="flex items-center space-x-4 text-white hover:text-red-500 transition duration-300 group"
                   onClick={onClose}
                 >
                   <User size={20} className="group-hover:text-red-500" />
                   <span className="text-lg">About</span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/contact"
                   className="flex items-center space-x-4 text-white hover:text-red-500 transition duration-300 group"
                   onClick={onClose}
                 >
                   <Phone size={20} className="group-hover:text-red-500" />
                   <span className="text-lg">Contact</span>
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
@@ -106,34 +107,36 @@ const LowerNav = () => {
         <div className="hidden md:flex justify-between items-center h-full px-6 lg:px-12 xl:px-24 2xl:px-32">
           {/* Logo */}
           <div className="text-xl font-semibold text-white">
-            <a href="#">Logo</a>
+            <Link to="/">
+              <img src={Brandlogo} alt="Logo" className="h-12" />
+            </Link>
           </div>
 
           {/* Menu Items */}
           <ul className="flex space-x-8">
             <li>
-              <a
-                href="#"
+              <Link
+                to="/"
                 className="text-white hover:text-red-500 transition duration-300"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/about"
                 className="text-white hover:text-red-500 transition duration-300"
               >
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/contact"
                 className="text-white hover:text-red-500 transition duration-300"
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
 
@@ -149,7 +152,7 @@ const LowerNav = () => {
         <div className="md:hidden flex justify-between items-center h-full px-6">
           {/* Logo */}
           <div className="text-xl font-semibold text-white">
-            <a href="#">Logo</a>
+            <Link to="/">Logo</Link>
           </div>
 
           {/* Hamburger Menu */}
