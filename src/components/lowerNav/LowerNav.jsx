@@ -141,7 +141,7 @@ const LowerNav = () => {
           {/* Logo - centered with hamburger menu on right */}
           <div className="flex-1 flex items-center justify-start">
             <Link to="/" className="text-xl font-semibold text-white">
-              <img src={Brandlogo} alt="Logo" className="h-10" />
+              <img src={Brandlogo} alt="Logo" className="h-7" />
             </Link>
           </div>
 
