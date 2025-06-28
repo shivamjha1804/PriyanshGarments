@@ -7,6 +7,8 @@ import SingleProduct from "./pages/SingleProduct";
 import MainContact from "./pages/MainContact";
 import About from "./pages/About";
 
+import PropTypes from "prop-types";
+
 // Maintenance Popup Component
 const MaintenancePopup = ({ isOpen, onClose, onContactClick }) => {
   if (!isOpen) return null;
@@ -55,6 +57,12 @@ const MaintenancePopup = ({ isOpen, onClose, onContactClick }) => {
       </div>
     </div>
   );
+};
+
+MaintenancePopup.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  onContactClick: PropTypes.func.isRequired,
 };
 
 // Main App Router Component
