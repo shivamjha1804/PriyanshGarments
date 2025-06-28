@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X, Home, User, Phone } from "lucide-react";
 import Brandlogo from "../../assets/shortLogo.png";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 // Mobile Menu Component
 const MobileMenu = ({ isOpen, onClose }) => {
@@ -164,4 +165,8 @@ const LowerNav = () => {
   );
 };
 
+MobileMenu.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+};
 export default LowerNav;
