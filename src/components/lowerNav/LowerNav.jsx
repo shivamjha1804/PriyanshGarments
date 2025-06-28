@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 // Mobile Menu Component
 const MobileMenu = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
-  
+
   return (
     <>
       {/* Overlay */}
@@ -19,7 +19,10 @@ const MobileMenu = ({ isOpen, onClose }) => {
       <div className="fixed top-0 right-0 h-full w-80 bg-[#292929] z-50 transform transition-transform duration-300 ease-in-out shadow-2xl">
         {/* Header */}
         <div className="flex justify-between items-center p-6 border-b border-gray-700">
-          <h2 className="text-xl font-semibold text-white">Menu</h2>
+          <div className="flex items-center">
+            {/* <img src={Brandlogo} alt="Logo" className="h-8 mr-3" /> */}
+            <h2 className="text-xl font-semibold text-white">Menu</h2>
+          </div>
           <button
             onClick={onClose}
             className="text-white hover:text-red-500 transition duration-300"
@@ -66,16 +69,6 @@ const MobileMenu = ({ isOpen, onClose }) => {
             </ul>
           </nav>
 
-          {/* Get Started Button */}
-          <div className="mt-8">
-            <button
-              className="w-full px-6 py-3 text-white bg-red-600 hover:bg-red-700 transition duration-300 rounded-lg font-medium"
-              onClick={onClose}
-            >
-              Get Started
-            </button>
-          </div>
-
           {/* Additional Info */}
           <div className="mt-8 pt-8 border-t border-gray-700">
             <p className="text-gray-400 text-sm text-center">
@@ -105,66 +98,63 @@ const LowerNav = () => {
       <nav className="w-full h-16 bg-[#292929] text-gray-600 shadow-md opacity-95 relative">
         {/* Desktop Nav */}
         <div className="hidden md:flex justify-between items-center h-full px-6 lg:px-12 xl:px-24 2xl:px-32">
-          {/* Logo */}
+          {/* Logo on the left */}
           <div className="text-xl font-semibold text-white">
             <Link to="/">
               <img src={Brandlogo} alt="Logo" className="h-12" />
             </Link>
           </div>
 
-          {/* Menu Items */}
-          <ul className="flex space-x-8">
-            <li>
-              <Link
-                to="/"
-                className="text-white hover:text-red-500 transition duration-300"
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/about"
-                className="text-white hover:text-red-500 transition duration-300"
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/contact"
-                className="text-white hover:text-red-500 transition duration-300"
-              >
-                Contact
-              </Link>
-            </li>
-          </ul>
-
-          {/* Button */}
-          <div>
-            <button className="px-4 py-2 text-white bg-red-600 hover:bg-red-700 transition duration-300 rounded">
-              Get Started
-            </button>
+          {/* Menu Items on the right */}
+          <div className="flex-1 flex justify-end">
+            <ul className="flex space-x-8">
+              <li>
+                <Link
+                  to="/"
+                  className="text-white hover:text-red-500 transition duration-300"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/about"
+                  className="text-white hover:text-red-500 transition duration-300"
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="text-white hover:text-red-500 transition duration-300"
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
 
         {/* Mobile Nav */}
-        <div className="md:hidden flex justify-between items-center h-full px-6">
-          {/* Logo */}
-          <div className="text-xl font-semibold text-white">
-            <Link to="/">
-              <img src={Brandlogo} alt="Logo" className="h-12" />
+        <div className="md:hidden flex justify-between items-center h-full px-4">
+          {/* Logo - centered with hamburger menu on right */}
+          <div className="flex-1 flex items-center justify-start">
+            <Link to="/" className="text-xl font-semibold text-white">
+              <img src={Brandlogo} alt="Logo" className="h-7" />
             </Link>
           </div>
 
           {/* Hamburger Menu */}
-          <button
-            onClick={toggleMenu}
-            className="text-white focus:outline-none hover:text-red-500 transition duration-300"
-            aria-label="Toggle menu"
-          >
-            <Menu size={24} />
-          </button>
+          <div className="flex-1 flex justify-end">
+            <button
+              onClick={toggleMenu}
+              className="text-white focus:outline-none hover:text-red-500 transition duration-300"
+              aria-label="Toggle menu"
+            >
+              <Menu size={24} />
+            </button>
+          </div>
         </div>
       </nav>
 
