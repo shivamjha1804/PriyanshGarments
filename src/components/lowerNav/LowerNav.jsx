@@ -152,7 +152,9 @@ const LowerNav = () => {
         <div className="md:hidden flex justify-between items-center h-full px-6">
           {/* Logo */}
           <div className="text-xl font-semibold text-white">
-            <Link to="/">Logo</Link>
+            <Link to="/">
+              <img src={Brandlogo} alt="Logo" className="h-12" />
+            </Link>
           </div>
 
           {/* Hamburger Menu */}
