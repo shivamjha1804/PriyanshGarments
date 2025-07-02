@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
-import StatisticsImage from "../../assets/Statistics/StatisticsImage.jpg";
+// import StatisticsImage from "../../assets/Statistics/StatisticsImage.jpg";
+const StatisticsImage =
+  "https://priyanshgarments.com/assets/Statistics/StatisticsImage.JPG";
 
 const useCounter = (start, end, duration) => {
   const [count, setCount] = useState(start);

@@ -1,6 +1,8 @@
 import React from "react";
-import InovationImage from "../../assets/Inovation/InovationImage.JPG";
+// import InovationImage from "../../assets/Inovation/InovationImage.JPG";
 
+const InovationImage =
+  "https://priyanshgarments.com/assets/Inovation/InovationImage.JPG";
 const InnovationIdea = () => {
   return (
     <div className="w-full mx-auto bg-gray-100 py-8 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 flex flex-col lg:flex-row items-center gap-8 lg:gap-12">

@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Menu, X, Home, User, Phone } from "lucide-react";
-import Brandlogo from "../../assets/shortLogo.png";
+// import Brandlogo from "../../assets/shortLogo.png";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+
+const LogoURl = "https://priyanshgarments.com/assets/logo.PNG";
 
 // Mobile Menu Component
 const MobileMenu = ({ isOpen, onClose }) => {
@@ -102,7 +104,7 @@ const LowerNav = () => {
           {/* Logo on the left */}
           <div className="text-xl font-semibold text-white">
             <Link to="/">
-              <img src={Brandlogo} alt="Logo" className="h-12" />
+              <img src={LogoURl} alt="Logo" className="h-12" />
             </Link>
           </div>
 
@@ -142,7 +144,7 @@ const LowerNav = () => {
           {/* Logo - centered with hamburger menu on right */}
           <div className="flex-1 flex items-center justify-start">
             <Link to="/" className="text-xl font-semibold text-white">
-              <img src={Brandlogo} alt="Logo" className="h-7" />
+              <img src={LogoURl} alt="Logo" className="h-7" />
             </Link>
           </div>
 

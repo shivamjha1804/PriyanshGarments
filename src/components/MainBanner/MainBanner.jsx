@@ -6,7 +6,7 @@ const MainBanner = () => {
     <div
       className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-screen"
       style={{
-        backgroundImage: `url(https://priyanshgarments.com/assets/mainBannerImage1-Dk-GIk7-.jpg)`,
+        backgroundImage: `url(https://priyanshgarments.com/assets/MainBanner/mainBannerImage1.jpg)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

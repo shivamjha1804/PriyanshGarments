@@ -1,8 +1,15 @@
 import React from "react";
-import Checking from "../../assets/Discription/Checking.jpg";
-import Kansai from "../../assets/Discription/Kansai.jpg";
-import Packing from "../../assets/Discription/Packing.JPG";
-import Press from "../../assets/Discription/Press.jpg";
+// import Checking from "../../assets/Discription/Checking.jpg";
+// import Kansai from "../../assets/Discription/Kansai.jpg";
+// import Packing from "../../assets/Discription/Packing.JPG";
+// import Press from "../../assets/Discription/Press.jpg";
+
+const CheckingImg =
+  "https://priyanshgarments.com/assets/Discription/Checking.jpg";
+const KansaiImg = "https://priyanshgarments.com/assets/Discription/Kansai.jpg";
+const PackingImg =
+  "https://priyanshgarments.com/assets/Discription/Packing.JPG";
+const PressImg = "https://priyanshgarments.com/assets/Discription/Press.jpg";
 
 const Discription = () => {
   return (
@@ -51,28 +58,28 @@ const Discription = () => {
       <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:w-1/2 w-full">
         <div className="lg:translate-y-10">
           <img
-            src={Checking}
+            src={CheckingImg}
             alt="Description One"
             className="w-full h-48 sm:h-64 md:h-80 object-cover border border-red-600"
           />
         </div>
         <div className="lg:-translate-y-10">
           <img
-            src={Kansai}
+            src={KansaiImg}
             alt="Description Two"
             className="w-full h-48 sm:h-64 md:h-80 object-cover border border-red-600"
           />
         </div>
         <div className="lg:translate-y-10">
           <img
-            src={Packing}
+            src={PackingImg}
             alt="Description Three"
             className="w-full h-48 sm:h-64 md:h-80 object-cover border border-red-600"
           />
         </div>
         <div className="lg:-translate-y-10">
           <img
-            src={Press}
+            src={PressImg}
             alt="Description Four"
             className="w-full h-48 sm:h-64 md:h-80 object-cover border border-red-600"
           />

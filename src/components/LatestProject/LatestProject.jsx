@@ -1,8 +1,13 @@
 import React, { useState } from "react";
-import image1 from "../../assets/LatestProject/image.jpg";
-import image2 from "../../assets/LatestProject/image2.jpg";
-import image3 from "../../assets/LatestProject/image3.jpg";
-import image4 from "../../assets/LatestProject/image4.png";
+// import image1 from "../../assets/LatestProject/image.jpg";
+// import image2 from "../../assets/LatestProject/image2.jpg";
+// import image3 from "../../assets/LatestProject/image3.jpg";
+// import image4 from "../../assets/LatestProject/image4.png";
+
+const image1 = "https://priyanshgarments.com/assets/LatestProject/image.jpg";
+const image2 = "https://priyanshgarments.com/assets/LatestProject/image2.jpg";
+const image3 = "https://priyanshgarments.com/assets/LatestProject/image3.jpg";
+const image4 = "https://priyanshgarments.com/assets/LatestProject/image4.png";
 
 const data = [
   { image: image1, title: "SCHOOL CLOTH" },
