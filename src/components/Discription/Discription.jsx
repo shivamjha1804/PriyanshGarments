@@ -8,7 +8,7 @@ const CheckingImg =
   "https://priyanshgarments.com/assets/Discription/Checking.jpg";
 const KansaiImg = "https://priyanshgarments.com/assets/Discription/Kansai.jpg";
 const PackingImg =
-  "https://priyanshgarments.com/assets/Discription/Packing.JPG";
+  "https://priyanshgarments.com/assets/Discription/Packing.jpg";
 const PressImg = "https://priyanshgarments.com/assets/Discription/Press.jpg";
 
 const Discription = () => {
