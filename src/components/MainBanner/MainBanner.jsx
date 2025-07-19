@@ -1,12 +1,11 @@
-import React from "react";
-// import BannerImage from "../../assets/MainBanner/mainBannerImage1.jpg";
+import BannerImage from "../../assets/MainBanner/mainBannerImage1.jpg";
 
 const MainBanner = () => {
   return (
     <div
       className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-screen"
       style={{
-        backgroundImage: `url(https://priyanshgarments.com/assets/mainBannerImage1-Dk-GIk7-.jpg)`,
+        backgroundImage: `url(${BannerImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
